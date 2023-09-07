@@ -3,7 +3,7 @@
 1. Clone this project
 
 ```bash
-  git clone https://github.com/RifqiPtr/programmer-support-project.git
+  git clone https://github.com/RifqiPtr/tracking-websites.git
 ```
 
 2. Move to folder project
