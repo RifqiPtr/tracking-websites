@@ -1,0 +1,58 @@
+<div>
+    <app-navigation></app-navigation>
+</div>
+<div class="container-home">
+    <div class="content-title">
+        <!-- <h3>21 Express Tracking Systems</h3> -->
+        <div class="form-control">
+            <form class="form-tracking">
+                <mat-form-field class="input-field">
+                  <mat-label>Please enter your Tracking Number here</mat-label>
+                  <input type="email" matInput [formControl]="trackingFormControl" [errorStateMatcher]="matcher"
+                         placeholder="Ex. AB123456789" class="input-bar">
+                  <mat-hint>Double check your tracking number.</mat-hint>
+                  <mat-error *ngIf="trackingFormControl.hasError('required')">
+                    Tracking Number cannot <strong>Empty</strong>
+                  </mat-error>
+                </mat-form-field>
+            </form>
+        </div>
+        <div>
+            <button mat-raised-button
+            class="button-check"
+            (click)="sendData()"
+            >Check</button>
+        </div>
+    </div>
+    <div *ngIf="isNotFound == false && isTrackingNumber == true" class="result-container">
+        <div>
+            <h3>Here's what we found about your package</h3>
+            <div class="table-info">
+                <h4>Sender: {{sender}} </h4>
+                <h4>Receiver: {{receiver}} </h4>
+            </div>
+            <div class="table-detail">
+                <h3>Details</h3>
+                <h4>Date Process: {{date}}</h4>
+                <h4>Service Type: {{serviceType}}</h4>
+                <h4>Delivery Status: {{status}}</h4>
+            </div>
+            <div class="table-activity">
+                <h3>Packet Activity</h3>
+                <div class="detail-activity"
+                *ngFor="let item of detailActivity">
+                    <h4>Branch Name: {{item.branch_name}}</h4>
+                    <h4 class="date">Date Process: {{item.dateprocess}}</h4>
+                    <h4 class="status">Status: {{item.status}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="isNotFound == true" class="result-not-found">
+        <img [src]="'assets/images/error/not-found.png'">
+        <h3>{{errorMessage}}</h3>
+        <h3>{{errorMessageDetail}}</h3>
+    </div>
+</div>
+
+

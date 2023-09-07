@@ -1,0 +1,76 @@
+.container-home{
+    height: 80%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    .content-title {
+        text-align: center;
+        font-size: 20px;
+    }
+    .form-control {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        font-size: 15px;
+    }
+    .form-tracking {
+        min-width: 150px;
+        max-width: 500px;
+        width: 100%;
+      }
+    .input-field {
+        width: 100%;
+    }
+    .input-bar {
+        margin-top: 20px;
+    }
+    .button-check {    
+        padding: 20px 240px;
+        margin-top: 30px;
+        color: white;
+        background-color: #0B2447;
+        font-size: 18px;
+    }
+    .result-container {
+        background-color: #0B2447;
+        color: white;
+        height: 85%;
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 20px;
+        font-size: 12px;
+        h3 {
+            text-align: center;
+            font-size: 16px;
+            padding-top: 20px;
+        }
+        .table-info { 
+            margin: 30px;
+        }
+        .table-detail {
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+        .detail-activity {
+            margin-left: 30px;
+            margin-top: 10px;   
+            .date {
+                margin-left: 40px;
+                color: rgb(0, 255, 149);
+            }
+            .status {
+                margin-left: 40px;
+                color: rgb(0, 255, 149);
+            }
+        }
+    }
+    .result-not-found {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        img {
+            width: 300px;
+        }
+    }
+}
